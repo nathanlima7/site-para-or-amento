@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Materiais de Construção</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Insira abaixo as medidas (em metros)</h1>
+        <div class="form-section">
+            <div>
+                <div class="form-group">
+                    <label for="comprimento">Comprimento do terreno:</label>
+                    <input type="number" id="comprimento" placeholder="Comprimento do terreno">
+                </div>
+                <div class="form-group">
+                    <label for="largura">Largura do terreno:</label>
+                    <input type="number" id="largura" placeholder="Largura do terreno">
+                </div>
+                <div class="form-group">
+                    <label for="altura">Altura do muro:</label>
+                    <input type="number" id="altura" placeholder="Altura do muro">
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="tijolos">Tijolos:</label>
+                    <input type="text" id="tijolos" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="cimento">Cimento:</label>
+                    <input type="text" id="cimento" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="areia">Areia:</label>
+                    <input type="text" id="areia" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="agregado">Agregado:</label>
+                    <input type="text" id="agregado" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="trelica">Treliça:</label>
+                    <input type="text" id="trelica" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="button-group">
+            <button onclick="calcular()">Calcular</button>
+            <button onclick="limpar()">Limpar</button>
+            <button onclick="window.print()">Imprimir</button>
+        </div>
+    </div>
+</body>
+</html>
