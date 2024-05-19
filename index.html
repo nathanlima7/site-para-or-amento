@@ -6,12 +6,13 @@
     <title>Calculadora de Materiais de Construção</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Insira abaixo as medidas (em metros)</h1>
+        <h1>Insira abaixo as medidas do<br>em metros</h1>
         <div class="form-section">
-            <div>
+            <div class="entrada">
                 <div class="form-group">
                     <label for="comprimento">Comprimento do terreno:</label>
                     <input type="number" id="comprimento" placeholder="Comprimento">
@@ -25,7 +26,7 @@
                     <input type="number" id="altura" placeholder="Altura">
                 </div>
             </div>
-            <div>
+            <div class="saida">
                 <div class="form-group">
                     <label for="tijolos">Tijolos:</label>
                     <input type="text" id="tijolos" readonly>
@@ -51,6 +52,7 @@
         <div class="button-group">
             <button onclick="calcular()">Calcular</button>
             <button onclick="limpar()">Limpar</button>
+            <button onclick="exportarPDF()">Exportar</button>
             <button onclick="window.print()">Imprimir</button>
         </div>
     </div>
