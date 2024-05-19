@@ -50,3 +50,38 @@ function limpar() {
     document.getElementById('agregado').value = '';
     document.getElementById('trelica').value = '';
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+    const {jsPDF} = window.jspdf;
+
+    window.exportarPDF = function(){
+        const tijolos = document.getElementById('tijolos').value || 0;
+        const cimento = document.getElementById('cimento').value || 0;
+        const areia = document.getElementById('areia').value || 0;
+        const agregado = document.getElementById('agregado').value || 0;
+        const trelica = document.getElementById('trelica').value || 0;
+
+        const hoje = new Date();
+        const dia = String(hoje.getDate()).padStart(2, '0');
+        const mes = String(hoje.getMonth()+ 1).padStart(2, '0');
+        const ano = hoje.getFullYear();
+
+        const formatoData = `${dia}${mes}${ano}`;
+
+        const nomeArquivo = `Orçamento ${formatoData}.pdf`;
+
+        const doc = new jsPDF();
+
+        doc.setFontSize(18);
+        doc.text('Orçamento', 10, 10);
+
+        doc.setFontSize(12);
+        doc.text(`Tijolos: ${tijolos}`, 10, 30);
+        doc.text(`Cimento: ${cimento}`, 10, 40);
+        doc.text(`Areia: ${areia}`, 10, 50);
+        doc.text(`Agregado: ${agregado}`, 10, 60);
+        doc.text(`Treliça: ${trelica}`, 10, 70);
+
+        doc.save(nomeArquivo);
+    };
+});
