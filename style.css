@@ -11,6 +11,8 @@ body {
 .container {
     background-color: #444;
     padding: 20px;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     max-width: 800px;
@@ -18,11 +20,11 @@ body {
 }
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .form-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     margin-bottom: 15px;
 }
 .form-section div {
@@ -41,7 +43,7 @@ h1 {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
 .output-group input {
     background-color: #555;
