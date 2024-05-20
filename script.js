@@ -13,6 +13,16 @@ function calcular() {
         alert('Por favor, preencha todos os campos com valores válidos.');
         return;
     }
+    if ((comprimento) <= 0){
+        alert('Os campos de entrada não podem conter valores menores ou iguais a zero.');
+        return;
+    } else if((largura) <= 0){
+        alert('Os campos de entrada não podem conter valores menores ou iguais a zero.');
+        return;
+    } else if((altura) <= 0){
+        alert('Os campos de entrada não podem conter valores menores ou iguais a zero.');
+        return;
+    };
 
     soma = (comprimento + largura) * 2;
     areaMuro = soma * altura;
